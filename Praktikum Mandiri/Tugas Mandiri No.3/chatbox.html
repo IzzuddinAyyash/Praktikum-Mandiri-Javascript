@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas chatbox</title>
+    <style>
+        body {
+            width: 900px;
+            height: 500px;
+            border: 1px solid black;
+            margin: auto;
+            box-sizing: border-box;
+            position: relative;
+        }
+        input {
+            position: absolute;
+            width: 90%;
+            bottom: 0px;
+            left: 0px;
+        }
+
+        button {
+            position: absolute;
+            width: 10%;
+            bottom: 0px;
+            right: 0px;
+            
+        }
+    </style>
+</head>
+<body>
+    <legend>
+        <input type="text" id="chat">
+        <button onclick="kirim()">Kirim</button>
+        <h2 id="room"></h2>
+    </legend>
+
+    <script>
+      let chat = document.getElementById("chat")
+      let hasil = document.getElementById("room")
+      let penampung = ""
+
+       function kirim () {
+        penampung += chat.value + "<br>"
+        hasil.innerHTML = penampung
+        chat.value = ""
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+</head>
+<body>
+    
+    <label for="hewan">Hewan</label>
+    <select id="hewan">
+        <option value="gorilla">Gorilla</option>
+        <option value="anjing"> Anjing</option>
+        <option value="singa">Singa</option>
+        <option value="jerapah">Jerapah</option>
+        <option value="burung">Burung</option>
+    </select>
+    <button onclick="cetakGambar()">Cetak Gambar</button>
+    
+    <img id="gambar" src="">
+
+    <script>
+        
+        function cetakGambar() {
+            const hewan = document.getElementById('hewan');
+            const gambar = document.getElementById('gambar');
+            
+
+            if (hewan.value == 'gorilla') {
+                gambar.src = 'https://files.worldwildlife.org/wwfcmsprod/images/Mountain_Gorilla_Silverback_WW22557/hero_small/4vzzw2piv9_Mountain_Gorilla_Silverback_WW22557.jpg'
+                alert ('ini Gorilla')
+            }
+
+
+            if (hewan.value == 'anjing') {
+                gambar.src = 'https://d1bpj0tv6vfxyp.cloudfront.net/articles/314611_4-11-2020_13-9-40.jpeg'
+                alert('ini Anjing')
+            }
+            if (hewan.value == 'singa') {
+                gambar.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Lion_waiting_in_Namibia.jpg/1200px-Lion_waiting_in_Namibia.jpg'
+               alert('ini Singa')
+            }
+            if (hewan.value == 'jerapah') {
+                gambar.src = 'http://c.files.bbci.co.uk/1357/production/_111215940_afp-tv060555600.jpg'
+                alert('ini Jerapah')
+            }
+            if (hewan.value == 'burung') {
+                gambar.src = 'https://cdnwpseller.gramedia.net/wp-content/uploads/2021/10/18224040/6040e267685f2.jpg'
+                alert ('ini burung')
+            }
+            
+            
+        }
+        
+    </script>
+</body>
+</html>
